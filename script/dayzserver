@@ -5,7 +5,7 @@
 ### maintained by thelastnoc
 #############################################
 
-version=16
+version=17
 appid=223350
 
 if [ "${ansi}" != "off" ]; then
