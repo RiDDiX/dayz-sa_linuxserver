@@ -8,6 +8,10 @@ fi
 distroid=$(grep ID /etc/os-release | grep -v _ID | grep -v ID_ | sed 's/ID=//g' | sed 's/\"//g')
 # debian and ubuntu
 if [ "${distroid}" == "debian" ] || [ "${distroid}" == "ubuntu" ]; then
+        # ubuntu 18 server needs universe repo
+        if [ "${distroid}" == "ubuntu" ]; then
+                sudo add-apt-repository universe
+        fi
         # install required packages
         sudo dpkg --add-architecture i386
         sudo apt install apt-transport-https -y
