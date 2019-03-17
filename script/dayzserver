@@ -186,7 +186,7 @@ fn_steamlogin_dayz(){
 }
 
 fn_runupdate_dayz(){
-	${HOME}/steamcmd/steamcmd.sh +login "${steamlogin}" +@sSteamCmdForcePlatformType windows +force_install_dir ${HOME}/serverfiles +app_update "${appid}" +quit
+	${HOME}/steamcmd/steamcmd.sh +login "${steamlogin}" +force_install_dir ${HOME}/serverfiles +app_update "${appid}" +quit
 }
 
 fn_install_dayz(){
@@ -267,7 +267,7 @@ fn_update_dayz(){
 }
 
 fn_runvalidate_dayz(){
-	${HOME}/steamcmd/steamcmd.sh +login "${steamlogin}" +@sSteamCmdForcePlatformType windows +force_install_dir ${HOME}/serverfiles +app_update "${appid}" validate +quit
+	${HOME}/steamcmd/steamcmd.sh +login "${steamlogin}" +force_install_dir ${HOME}/serverfiles +app_update "${appid}" validate +quit
 }
 
 fn_validate_dayz(){
